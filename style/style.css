@@ -71,7 +71,7 @@ body {
   --color-fg-subtle: #6e7781;
   --color-canvas-default: #f1f5f9;
   --color-canvas-subtle: #fff;
-  --color-bg-subtle: #f8f9fa;
+  --color-bg-subtle: #f8f9fa54;
   --color-border-default: #d0d7de;
   --color-border-muted: #ececec94;
   --color-neutral-muted: rgba(175, 184, 193, 0.2);
@@ -207,6 +207,9 @@ table {
   border-color: inherit;
   border-collapse: collapse;
 }
+
+table.shortcuts-last td:last-child > code,
+table.shortcuts-last td:last-child > del > code,
 
 table.shortcuts td:not(:last-child) > code,
 table.shortcuts td:not(:last-child) > del > code,
@@ -490,12 +493,13 @@ body.home .max-container a.home-button:visited:hover {
   color: rgb(241 245 249 / var(--text-opacity));
   --bg-opacity: 0.5;
   background-color: rgb(62 69 72 / var(--bg-opacity));
+  background-size: 100% 100%;
   transition: all 0.3s;
   text-decoration: none;
 }
 .home-card a:hover {
-  --bg-opacity: 1;
-  --text-opacity: 0.75;
+  --bg-opacity: 1 !important;
+  --text-opacity: 0.75 !important;
 }
 .home-card a svg {
   min-width: 1.6rem;
@@ -641,6 +645,7 @@ a.text-grey {
 .h1wrap-body {
   display: flex;
   flex-direction: column;
+  padding-bottom: 1.75rem;
   gap: 3rem;
   position: relative;
 }
